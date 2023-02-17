@@ -1,20 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char alp;
+	char pla;
 
-	for (alp = 'z'; alp <= 'a'; alp--)
+	for (alp = 'z'; alp >= 'a'; alp--)
 		putchar(alp);
-		putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
