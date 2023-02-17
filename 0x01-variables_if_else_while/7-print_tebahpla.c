@@ -10,8 +10,8 @@ int main(void)
 {
 	char pla;
 
-	for (alp = 'z'; alp >= 'a'; alp--)
-		putchar(alp);
+	for (pla = 'z'; pla >= 'a'; pla--)
+		putchar(pla);
 	putchar('\n');
 
 	return (0);
