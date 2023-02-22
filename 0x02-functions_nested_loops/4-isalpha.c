@@ -19,5 +19,5 @@ int _isalpha(int c)
 				letter = 1;
 		}
 	}
-	return (0)
+	return (0);
 }
