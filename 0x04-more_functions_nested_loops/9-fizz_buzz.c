@@ -1,5 +1,10 @@
 #include <stdio.h>
+#include "main.h"
 
+/**
+ * main - Entry piont
+ * Return: Always 0
+ */
 int main(void)
 {
 	int a;
