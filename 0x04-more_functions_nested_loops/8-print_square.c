@@ -2,7 +2,7 @@
 
 /**
  * print_square - a function that draws a square on the terminal.
- * @size: size of the square
+ * @size: Input integer
  * Return: Always 0
  */
 void print_square(int size)
@@ -19,4 +19,7 @@ void print_square(int size)
 		_putchar('\n');
 		}
 	}
+	else
+	{
+		_putchar('\n');
 }
