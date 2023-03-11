@@ -14,12 +14,14 @@ int main(int argc, char **argv)
 
 	if (argc > 2)
 	{
-		for i(i = 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 			mul = mul * atoi(argv[i]);
 		printf("%d\n", mul);
 	}
 	else
+	{
 		printf("Error\n");
 		return (1);
+	}
 	return (0);
 }
