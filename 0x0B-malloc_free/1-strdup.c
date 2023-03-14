@@ -35,6 +35,10 @@ char *_strdup(char *str)
 			str++;
 		}
 	}
+	else
+	{
+		return (NULL);
+	}
 
 	new[size + 1] = '\0';
 
