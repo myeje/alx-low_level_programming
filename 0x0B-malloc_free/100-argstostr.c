@@ -10,14 +10,14 @@
 char *argstostr(int ac, char **av)
 {
 	char *p;
-	int a = 0, b = 0, c = 0, len = 0;
+	int a = 0, b, c = 0, len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (; a < ac; a++)
 	{
-		for (; av[a][b]; b++)
+		for (b = 0; av[a][b]; b++)
 			len++;
 		len++;
 	}
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (; a < ac; a++)
 	{
-		for (; av[a][b]; b++)
+		for (b = 0; av[a][b]; b++)
 		{
 			p[c] = av[a][b];
 			c++;
