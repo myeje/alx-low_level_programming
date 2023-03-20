@@ -30,14 +30,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	namecp = malloc(sizeof(lname + 1));
 	if (namecp == NULL)
 		return (NULL);
-	for (i = 0; i < lname; i++)
+	for (i = 0; name[i]; i++)
 		namecp[i] = name[i];
 	namecp[i] = '\0';
 
 	ownercp = malloc(sizeof(lowner + 1));
 	if (ownercp == NULL)
 		return (NULL);
-	for (i = 0; i < lowner; i++)
+	for (i = 0; owner[i]; i++)
 		ownercp[i] = owner[i];
 	ownercp[i] = '\0';
 
