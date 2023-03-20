@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * new_dog - dog structure
@@ -13,7 +12,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 	char *namecp, *ownercp;
-	int lname = 0, lowner = 0, i;
+	int i, lname = 0, lowner = 0;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
