@@ -1,22 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
+#include <string.h>
+#include "3-calc.h"
 
 /**
- ** main - check the code
- **
- ** Return: Always 0.
+ ** main - Funtion performs operations
+ ** @argc: number of arguments
+ ** @argv: argument array
+ ** Return: operation or Error.
  **/
-int main(void)
+int main(int argc, char *argv[])
 {
-	int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
-	int index;
+	int (*func)(int, int);
 
-	index = int_index(array, 20, is_98);
-	printf("%d\n", index);
-	index = int_index(array, 20, abs_is_98);
-	printf("%d\n", index);
-	index = int_index(array, 20, is_strictly_positive);
-	printf("%d\n", index);
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	func = get_op_func(argv[2]);
+
+	if (func == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
