@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - function for selecting correct 
+ * get_op_func - function for selecting correct
  * function to perfom the operator
  * @s: input operator passed as argument
  * Return: A pointer
