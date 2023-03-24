@@ -2,9 +2,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
-
 /**
- ** print_all - A function prints anything
+ ** print_all - Function that prints anything
  ** @format: A list of types arguments
  ** Return: Nada
  **/
@@ -43,7 +42,8 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's') && format[(i + 1)] != '\0')
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+					format[i] == 's') && format[(i + 1)] != '\0')
 			printf(", ");
 		i++;
 	}
