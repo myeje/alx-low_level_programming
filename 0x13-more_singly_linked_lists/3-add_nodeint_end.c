@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "lists.h"
 
+/**
+ * add_nodeint_end - function that adds a node to the end of a linked list
+ * @head: pointer to a poiter containing address of first node of a linked list
+ * @n: input integer
+ * Return: address to new node
+ */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *add, *temp;
