@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * binary_to_unit - function that converts binary number to unsigned int
+ * binary_to_uint - function that converts binary number to unsigned int
  * @b: input char binary number
  * Return: converted number or 0
  */
