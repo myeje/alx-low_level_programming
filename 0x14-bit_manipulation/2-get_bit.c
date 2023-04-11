@@ -15,10 +15,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	maxbin <<= index;
 	if (maxbin == 0)
 		return (-1);
-/**
-	if (n == NULL)
-		return (-1);
-*/
 	if ((n & maxbin))
 		return (1);
 	else
