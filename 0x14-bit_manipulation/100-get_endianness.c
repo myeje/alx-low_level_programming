@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * get_endianness - function that checks the edianness meaning how numbers are stored
+ * get_endianness - function that checks the edianness
  * Return: 1 for little-endian or 0 for big-endian
  */
 int get_endianness(void)
