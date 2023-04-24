@@ -5,8 +5,8 @@
 #include <unistd.h>
 #include <string.h>
 
-/*
- * create_file - function creates a file
+/**
+ * create_file - function that creats a file
  * @filename: name the file should be called
  * @text_content: content to write to the new file
  * Return: 1 if successful and -1 otherwise
