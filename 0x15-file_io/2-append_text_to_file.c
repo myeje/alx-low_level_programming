@@ -24,13 +24,11 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	if (text_content)
-	{
-		length = strlen(text_content);
-		write_file = write(open_file, text_content, length);
-		if (write_file < 0)
-			return (-1);
-	}
+	length = strlen(text_content);
+	write_file = write(open_file, text_content, length);
+	if (write_file < 0)
+		return (-1);
+	
 	close(open_file);
 	return (1);
 }
