@@ -10,7 +10,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int bin_max = 1 << index;
 
-	if (bin_max > n)
+	if (bin_max == 0)
 		return (-1);
 	if ((n & bin_max))
 		return (1);
