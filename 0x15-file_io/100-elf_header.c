@@ -27,9 +27,14 @@ void display_error(const char *message)
  */
 void display_elfheader(const Elf64_Ehdr *header)
 {
+	int i = 0;
+
 	printf("Magic: ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	while (i < EI_NIDENT)
+	{
 		printf("%02x ", header->e_ident[i]);
+		i++;
+	}
 	printf("\n");
 
 	printf("Class: %d-bit\n", header->e_ident[EI_CLASS] == ELFCLASS32 ? 32 : 64);
@@ -84,16 +89,17 @@ void display_elfheader(const Elf64_Ehdr *header)
  */
 int main(int argc, char *argv[])
 {
+	Elf64_Ehdr header;
+	char *filename = argv[1];
+	int fd = open(filename, O_RDONLY);
+	ssize_t bytes_read = read(fd, &header, sizeof(header));
+
 	if (argc != 2)
 		display_error("Usage: elf_header elf_filename");
 
-	const char *filename = argv[1];
-	int fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		display_error(strerror(errno));
 
-	Elf64_Ehdr header;
-	ssize_t bytes_read = read(fd, &header, sizeof(header));
 	if (bytes_read == -1)
 		display_error(strerror(errno));
 
