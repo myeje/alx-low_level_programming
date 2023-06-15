@@ -13,7 +13,7 @@ size_t dlistint_len(const dlistint_t *h)
 	int num = 0;
 
 	if (h == NULL)
-		return(num);
+		return (num);
 
 	while (h)
 	{
