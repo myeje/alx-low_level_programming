@@ -14,7 +14,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (hash_table == NULL)
 	{
 		return (NULL);
-		free(hash_table);
 	}
 
 	hash_table->size = size;
@@ -22,7 +21,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (hash_table->array == NULL)
 	{
 		return (NULL);
-		free(hash_table->array);
 	}
 	for (; count < size; count++)
 		hash_table->array[count] = NULL;
