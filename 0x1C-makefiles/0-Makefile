@@ -1,8 +1,6 @@
-#Make files with variables
-CC=gcc
-SRC= main.c school.c
+#create first makefile
+CC = gcc
+CFLAGS = -Wall -g
 
-school: $(SRC)
-	$(CC) $(SRC) -o school
-
-all: school
+all: main.c school.c
+	$(CC) $(CFLAGS) main.c school.c -o school
