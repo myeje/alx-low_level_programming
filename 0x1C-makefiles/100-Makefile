@@ -6,8 +6,6 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-.PHONY: all clean fclean re
-
 # all: build executable
 all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
@@ -25,3 +23,5 @@ fclean: clean oclean
 
 #forces recompilation of all source files
 re: fclean all
+
+.PHONY: all clean fclean re
