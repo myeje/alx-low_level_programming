@@ -23,8 +23,7 @@ oclean:
 	$(RM) $(OBJ)
 
 #deletes all Emacs and Vim temporary files, the executable, and the object files
-fclean: clean
-	$(RM) $(NAME)
+fclean: clean oclean
 
 #forces recompilation of all source files
 re: fclean all
